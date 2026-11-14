@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fifth House Holdings</title>
+<meta name="description" content="Fifth House Holdings, LLC is a small, independent company that makes tools for paying attention to your inner life. Its first product is MYRHR, a dream journal for iPhone.">
+<meta name="theme-color" content="#F2EFEA">
+<link rel="canonical" href="https://fifthhouseholdings.com/">
+<link rel="preload" href="fonts/CormorantGaramond-Light.ttf" as="font" type="font/ttf" crossorigin>
+<style>
+  @font-face { font-family: "Cormorant Garamond"; src: url("fonts/CormorantGaramond-Light.ttf") format("truetype"); font-weight: 300; font-style: normal; font-display: swap; }
+  @font-face { font-family: "Cormorant Garamond"; src: url("fonts/CormorantGaramond-LightItalic.ttf") format("truetype"); font-weight: 300; font-style: italic; font-display: swap; }
+
+  :root {
+    --paper: #F2EFEA;
+    --ink: #0B0B0C;
+    --ink-soft: #4A4640;
+    --bronze: #8A6B3F;
+    --rule: #CFC8BC;
+    --serif: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: Futura, "Avenir Next", "Century Gothic", "Gill Sans", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 1.3125rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  /* Paper grain: drawn here, nothing fetched. */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    opacity: .22;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .32  0 0 0 0 .27  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  .sheet {
+    position: relative;
+    max-width: 39rem;
+    margin: 0 auto;
+    padding: clamp(3.5rem, 12vh, 8rem) 1.5rem 4rem;
+  }
+  .label {
+    font-family: var(--sans);
+    font-size: .6875rem;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    margin: 0;
+  }
+  h1 {
+    font-weight: 300;
+    font-size: clamp(2.6rem, 9vw, 3.3rem);
+    line-height: 1.04;
+    letter-spacing: -.012em;
+    margin: 1.1rem 0 0;
+  }
+  h1 .llc { font-style: italic; color: var(--ink-soft); white-space: nowrap; }
+  .rule { border: 0; height: 0; margin: 2.75rem 0; border-top: 1px solid var(--rule); position: relative; overflow: visible; }
+  .rule::after { content: ""; position: absolute; left: 0; top: -1px; width: 3.25rem; border-top: 1px solid var(--bronze); }
+  p { margin: 0 0 1.15rem; max-width: 34rem; }
+  .lede { font-size: 1.5rem; line-height: 1.45; }
+  h2 {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: .6875rem;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    margin: 0 0 1.1rem;
+  }
+  .say { font-style: italic; color: var(--ink-soft); }
+  .status { font-style: italic; color: var(--ink-soft); margin-top: 1.5rem; }
+  dl { margin: 0; display: grid; grid-template-columns: 1fr; row-gap: .9rem; }
+  dt { font-size: 1.0625rem; color: var(--ink-soft); }
+  dd { margin: 0; }
+  a { color: var(--ink); text-decoration-color: var(--bronze); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+  a:hover, a:focus-visible { color: var(--bronze); }
+  a:focus-visible { outline: 1px solid var(--bronze); outline-offset: 3px; }
+  footer {
+    margin-top: 4.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: 1rem;
+    color: var(--ink-soft);
+  }
+  footer p { margin: 0 0 .35rem; }
+  @media (min-width: 40rem) {
+    dl { grid-template-columns: 13rem 1fr; column-gap: 1.5rem; }
+  }
+  @media print { body::before { display: none; } }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <p class="label">Fifth House Holdings</p>
+  <h1>Fifth House Holdings, <span class="llc">LLC</span></h1>
+
+  <hr class="rule">
+
+  <p class="lede">We are a small, independent company that makes tools for paying attention to your inner life. We build slowly and carefully, and we answer to the people who use what we make.</p>
+
+  <hr class="rule">
+
+  <section aria-labelledby="myrhr">
+    <h2 id="myrhr">MYRHR</h2>
+    <p>Our first product is MYRHR <span class="say">(say &ldquo;mirror&rdquo;)</span>, a dream journal for iPhone. You speak or type a dream when you wake. Over time, MYRHR shows you the symbols and patterns that keep returning, and asks you about them. It never tells you what a dream means. That part is yours.</p>
+    <p>The words of your dreams are encrypted on your phone before they go anywhere. There are no ads and no tracking, and we do not sell data.</p>
+    <p class="status">MYRHR is in private beta now.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section aria-labelledby="contact">
+    <h2 id="contact">Contact</h2>
+    <dl>
+      <dt>General and privacy questions</dt>
+      <dd><a href="mailto:privacy@fifthhouseholdings.com">privacy@fifthhouseholdings.com</a></dd>
+      <dt>Bug reports</dt>
+      <dd><a href="mailto:bugreport@fifthhouseholdings.com">bugreport@fifthhouseholdings.com</a></dd>
+    </dl>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Fifth House Holdings, LLC.</p>
+    <p>MYRHR is a product of Fifth House Holdings, LLC.</p>
+  </footer>
+</main>
+</body>
+</html>
