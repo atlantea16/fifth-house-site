@@ -193,12 +193,8 @@
 
   <section aria-labelledby="contact">
     <h2 id="contact">Contact</h2>
-    <dl>
-      <dt>General and privacy questions</dt>
-      <dd><a href="mailto:privacy@fifthhouseholdings.com">privacy@fifthhouseholdings.com</a></dd>
-      <dt>Bug reports</dt>
-      <dd><a href="mailto:bugreport@fifthhouseholdings.com">bugreport@fifthhouseholdings.com</a></dd>
-    </dl>
+    <p>For anything, including privacy questions, write to <a id="mail" href="#contact">hello <span aria-hidden="true">(at)</span> fifthhouseholdings.com</a>.</p>
+    <p class="status">Found a bug in MYRHR? Report it from Settings in the app.</p>
   </section>
 
   <footer>
@@ -206,5 +202,14 @@
     <p>MYRHR is a product of Fifth House Holdings, LLC.</p>
   </footer>
 </main>
+<script>
+  // The address is put together here so it never sits in the page source as plain text.
+  (function () {
+    var a = document.getElementById("mail"); if (!a) return;
+    var who = "hello", where = ["fifthhouseholdings", "com"].join(".");
+    a.textContent = who + "\u0040" + where;
+    a.href = "mai" + "lto:" + who + "\u0040" + where;
+  })();
+</script>
 </body>
 </html>
